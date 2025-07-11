@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-dark text-white;
+}
+
+.app {
+  backdrop-filter: blur(20px);
+  background: rgba(9, 5, 37, 0.1);;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(133, 133, 133, 0.4), rgba(255, 255, 255, 0.1));
+  color: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+
+.moving-gradient-bg {
+  background: linear-gradient(
+    270deg,
+    #8c52ff,
+    #ff69b4,
+    #5ce1e6,
+    #8c52ff
+  );
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
